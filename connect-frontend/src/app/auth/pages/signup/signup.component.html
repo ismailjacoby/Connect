@@ -1,0 +1,116 @@
+<div class="flex justify-center items-center w-full h-screen">
+  <div class="flex flex-col w-96 p-6 bg-white shadow-md rounded-lg">
+    <h2 class="text-center text-2xl font-semibold mb-6">Create Your Account</h2>
+
+    <form>
+      <!-- First Name Input -->
+      <div class="mb-4">
+        <label for="firstname" class="block text-sm font-medium text-gray-700"
+          >First Name</label
+        >
+        <input
+          id="firstname"
+          type="text"
+          placeholder="Enter your first name"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Last Name Input -->
+      <div class="mb-4">
+        <label for="lastname" class="block text-sm font-medium text-gray-700"
+          >Last Name</label
+        >
+        <input
+          id="lastname"
+          type="text"
+          placeholder="Enter your last name"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Birthday Input -->
+      <div class="mb-4">
+        <label for="birthday" class="block text-sm font-medium text-gray-700"
+          >Birthday</label
+        >
+        <input
+          id="birthday"
+          type="date"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Username Input -->
+      <div class="mb-4">
+        <label for="username" class="block text-sm font-medium text-gray-700"
+          >Username</label
+        >
+        <input
+          id="username"
+          type="text"
+          placeholder="Choose a username"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Email Input -->
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700"
+          >Email</label
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email address"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Password Input -->
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium text-gray-700"
+          >Password</label
+        >
+        <input
+          id="password"
+          type="password"
+          placeholder="Create a strong password"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Confirm Password Input -->
+      <div class="mb-6">
+        <label
+          for="confirm-password"
+          class="block text-sm font-medium text-gray-700"
+          >Confirm Password</label
+        >
+        <input
+          id="confirm-password"
+          type="password"
+          placeholder="Confirm your password"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
+        />
+      </div>
+
+      <!-- Sign Up Button -->
+      <button class="btn-primary mb-4">Sign Up</button>
+    </form>
+
+    <!-- Links -->
+    <div
+      class="flex flex-col text-center justify-between text-sm text-gray-600"
+    >
+      <span>
+        Already have an account?
+        <a
+          routerLink="/auth/login"
+          class="text-[var(--main-color)] hover:underline"
+          >Log In</a
+        >
+      </span>
+    </div>
+  </div>
+</div>
