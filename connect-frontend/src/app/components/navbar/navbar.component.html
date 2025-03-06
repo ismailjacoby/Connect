@@ -1,0 +1,60 @@
+<!-- Search Bar (Top of Screen) - Visible Only on Mobile -->
+<div
+  class="search-bar fixed top-0 left-0 w-full p-4 flex justify-center bg-transparent z-50 md:hidden"
+>
+  <input
+    type="text"
+    placeholder="Search..."
+    class="w-[80%] p-2 rounded-md border border-white bg-transparent text-white shadow-md focus:outline-none"
+  />
+</div>
+
+<nav
+  class="fixed-nav top-16 left-0 w-full p-4 flex items-center justify-between md:flex-row hidden md:flex"
+>
+  <!-- Logo -->
+  <div class="flex items-center space-x-2">
+    <h2 class="font-bold text-primary h-8">CONNECT</h2>
+  </div>
+
+  <!-- Center Icons (Desktop) -->
+  <div class="hidden md:flex space-x-6">
+    <a href="/home"><img src="/icons/home.svg" class="w-6 h-6" alt="Home" /></a>
+    <a href="/text"><img src="/icons/text.svg" class="w-6 h-6" alt="Text" /></a>
+
+    <a href="/photo"
+      ><img src="/icons/image.svg" class="w-6 h-6" alt="Photo"
+    /></a>
+    <a href="/video"
+      ><img src="/icons/video.svg" class="w-6 h-6" alt="Video"
+    /></a>
+  </div>
+
+  <!-- Profile & Settings (Desktop) -->
+  <div class="hidden md:flex items-center space-x-4">
+    <img [src]="profilePicture" alt="Profile" class="w-8 h-8 rounded-full" />
+    <a routerLink="/settings">
+      <img src="/icons/gear.svg" class="w-6 h-6" alt="Settings" />
+    </a>
+  </div>
+</nav>
+
+<!-- Mobile Navbar -->
+<div
+  class="mobile-nav fixed bottom-0 left-0 w-full p-3 md:hidden bg-[var(--mobile-navbar-color)]"
+>
+  <!-- Mobile Navigation Icons -->
+  <div class="flex justify-around items-center">
+    <a href="/home"><img src="/icons/home.svg" class="w-6 h-6" alt="Home" /></a>
+    <a href="/text"><img src="/icons/text.svg" class="w-6 h-6" alt="Text" /></a>
+    <a href="/video"
+      ><img src="/icons/video.svg" class="w-6 h-6" alt="Video"
+    /></a>
+    <a href="/photo"
+      ><img src="/icons/image.svg" class="w-6 h-6" alt="Photo"
+    /></a>
+    <a href="/profile"
+      ><img src="/icons/user.svg" class="w-6 h-6" alt="Profile"
+    /></a>
+  </div>
+</div>

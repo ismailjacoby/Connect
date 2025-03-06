@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+:root {
+  --main-color: #f45959; /* Red */
+  --background-color: #ffffff; /* White */
+  --input-color: #f3f5f7; /* Light Gray */
+  --text-primary: #000000; /* Black */
+  --text-secondary: #959595; /* Gray */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+nav {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+svg {
+  fill: var(--text-primary);
+}
+
+input {
+  background-color: var(--input-color);
+  color: var(--text-primary);
+}
+
+.btn-1 {
+  background-color: var(--button-color);
+  color: var(--text-primary);
+}
+
+.secondary-text {
+  color: var(--text-secondary);
+}
+
+.fixed-nav {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+.mobile-nav {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
