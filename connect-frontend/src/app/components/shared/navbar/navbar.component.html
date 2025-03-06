@@ -14,25 +14,39 @@
 >
   <!-- Logo -->
   <div class="flex items-center space-x-2">
-    <h2 class="font-bold text-primary h-8 italic">CONNECT</h2>
+    <h2
+      class="font-bold text-primary h-8 italic cursor-pointer"
+      routerLink="/home"
+    >
+      CONNECT
+    </h2>
   </div>
 
   <!-- Center Icons (Desktop) -->
   <div class="hidden md:flex space-x-6">
-    <a href="/home"><img src="/icons/home.svg" class="w-6 h-6" alt="Home" /></a>
-    <a href="/text"><img src="/icons/text.svg" class="w-6 h-6" alt="Text" /></a>
+    <a routerLink="/home"
+      ><img src="/icons/home.svg" class="w-6 h-6" alt="Home"
+    /></a>
+    <a routerLink="/text"
+      ><img src="/icons/text.svg" class="w-6 h-6" alt="Text"
+    /></a>
 
-    <a href="/photo"
+    <a routerLink="/photo"
       ><img src="/icons/image.svg" class="w-6 h-6" alt="Photo"
     /></a>
-    <a href="/video"
+    <a routerLink="/video"
       ><img src="/icons/video.svg" class="w-6 h-6" alt="Video"
     /></a>
   </div>
 
   <!-- Profile & Settings (Desktop) -->
   <div class="hidden md:flex items-center space-x-4">
-    <img [src]="profilePicture" alt="Profile" class="w-8 h-8 rounded-full" />
+    <img
+      [src]="profilePicture"
+      routerLink="/profile"
+      alt="Profile"
+      class="w-8 h-8 rounded-full cursor-pointer"
+    />
     <a routerLink="/settings">
       <img src="/icons/gear.svg" class="w-6 h-6" alt="Settings" />
     </a>
@@ -47,11 +61,12 @@
   <div class="flex justify-around items-center">
     <a href="/home"><img src="/icons/home.svg" class="w-6 h-6" alt="Home" /></a>
     <a href="/text"><img src="/icons/text.svg" class="w-6 h-6" alt="Text" /></a>
-    <a href="/video"
-      ><img src="/icons/video.svg" class="w-6 h-6" alt="Video"
-    /></a>
+
     <a href="/photo"
       ><img src="/icons/image.svg" class="w-6 h-6" alt="Photo"
+    /></a>
+    <a href="/video"
+      ><img src="/icons/video.svg" class="w-6 h-6" alt="Video"
     /></a>
     <a href="/profile"
       ><img src="/icons/user.svg" class="w-6 h-6" alt="Profile"
