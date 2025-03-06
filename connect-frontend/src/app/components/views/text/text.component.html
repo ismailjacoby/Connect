@@ -1,3 +1,96 @@
-<div class="container">
-  <p>home works!</p>
+<div class="max-w-3xl mx-auto p-6">
+  <!-- Create Post -->
+  <div class="mb-6">
+    <textarea
+      [(ngModel)]="newPostMessage"
+      placeholder="Write a message..."
+      class="w-full h-28 p-4 text-base border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-main-color"
+    ></textarea>
+    <button (click)="addPost()" class="mt-4 btn-primary hover:opacity-90">
+      Create Post
+    </button>
+  </div>
+
+  <!-- Posts -->
+  <div>
+    @for(post of posts; track $index){
+    <div class="p-4 border border-gray-300 rounded-lg bg-white shadow-md mb-6">
+      <div class="flex items-center space-x-3">
+        <img
+          [src]="post.profilePicture"
+          alt="profile picture"
+          class="w-10 h-10 rounded-full"
+        />
+        <span class="font-semibold">{{ post.username }}</span>
+      </div>
+      <p class="mt-2 text-base">{{ post.message }}</p>
+
+      <div class="mt-4 flex space-x-4 text-sm">
+        <!-- Like Button -->
+        <button
+          (click)="incrementLikes(post)"
+          class="flex items-center space-x-2 text-gray-500"
+        >
+          <img src="icons/like.svg" class="w-6 h-6" alt="Like" />
+          <span>{{ post.likes }}</span>
+        </button>
+
+        <!-- Comment Button -->
+        <button
+          (click)="toggleComment($index)"
+          class="flex items-center space-x-2 text-gray-500"
+        >
+          <img src="/icons/comment.svg" class="w-6 h-6" alt="Comment" />
+          <span>Comment</span>
+        </button>
+
+        <!-- Share Button -->
+        <button
+          (click)="incrementReposts(post)"
+          class="flex items-center space-x-2 text-gray-500"
+        >
+          <img src="/icons/share.svg" class="w-6 h-6" alt="Share" />
+          <span>{{ post.reposts }}</span>
+        </button>
+
+        <!-- Bookmark Button -->
+        <button
+          (click)="toggleFavorite(post)"
+          class="flex items-center space-x-2 text-gray-500"
+        >
+          <img
+            [src]="
+              post.favorited
+                ? '/icons/bookmark-filled.svg'
+                : '/icons/bookmark.svg'
+            "
+            class="w-6 h-6"
+            alt="Bookmark"
+          />
+        </button>
+
+        <span class="ml-auto text-gray-400 text-center"
+          >{{ post.views }} views</span
+        >
+      </div>
+
+      <!-- Comment Section -->
+      @if (post.showCommentBox) {
+      <div>
+        <textarea
+          [(ngModel)]="post.newComment"
+          class="w-full h-16 p-4 text-base border border-gray-300 rounded-lg resize-none mt-2"
+          placeholder="Write a comment..."
+        ></textarea>
+        <button
+          (click)="addComment(post, $index)"
+          class="mt-2 btn-primary hover:opacity-90"
+        >
+          Comment
+        </button>
+      </div>
+      }
+    </div>
+    }
+  </div>
 </div>
