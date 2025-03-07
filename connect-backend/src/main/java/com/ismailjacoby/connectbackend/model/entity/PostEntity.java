@@ -11,10 +11,6 @@ public class PostEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private UserEntity user;
-
     @Enumerated(EnumType.STRING)
     private PostType type;
 
@@ -38,6 +34,10 @@ public class PostEntity {
     public void incrementViews() {
         this.views++;
     }
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 
     // Getters and Setters
 

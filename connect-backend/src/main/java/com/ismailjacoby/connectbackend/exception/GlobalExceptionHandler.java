@@ -52,10 +52,5 @@ public class GlobalExceptionHandler {
         return new ErrorResponse("Invalid argument", Map.of("error", ex.getMessage()));
     }
 
-    // Generic exception handler (for uncaught exceptions)
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ErrorResponse handleGenericException(Exception ex) {
-        return new ErrorResponse("Internal Server Error", Map.of("error", "An unexpected error occurred"));
-    }
+
 }
